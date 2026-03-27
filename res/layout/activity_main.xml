@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="40dp"
+    android:paddingBottom="10dp"
+    tools:context=".MainActivity">
+
+    <!-- 标题区 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="五子连珠小游戏"
+        android:textColor="#333333"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- 信息区 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="用户: 游客"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvHighScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Best: 0"
+            android:textColor="#888888"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Score: 0"
+            android:textColor="#FF0000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <!-- 按钮区：加上背景颜色和固定高度 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#F0F0F0"
+        android:layout_marginBottom="5dp">
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="开始"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4CAF50"
+            android:layout_margin="2dp"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnEnd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="结束"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#F44336"
+            android:layout_margin="2dp"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnConfig"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="配置"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2196F3"
+            android:layout_margin="2dp"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnAbout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="关于"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF9800"
+            android:layout_margin="2dp"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- 棋盘区：自动填满剩余空间 -->
+    <com.flyfanchen.fivechess.LinesView
+        android:id="@+id/linesView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
